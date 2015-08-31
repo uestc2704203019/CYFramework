@@ -43,12 +43,14 @@
     
     float item_space = 5.f;
     
+    float start_x = (kMainApplicationWidth-item_width*_pageNumber-item_space*(_pageNumber-1))/2.f;
+    
     if (self.subviews.count<=0) {
         
         for (int i=0; i<_pageNumber; i++) {
             UIImageView *imageView = [[UIImageView alloc] init];
             imageView.tag = i;
-            imageView.frame = CGRectMake((item_space+item_width)*i, (self.frame.size.height-item_width)/2.f, item_width, item_width);
+            imageView.frame = CGRectMake((item_space+item_width)*i+start_x, (self.frame.size.height-item_width)/2.f, item_width, item_width);
             if (imageView.tag == _currentPage) {
                 imageView.image = _selectImage;
             }else{
@@ -61,7 +63,7 @@
     
     for (UIImageView *conView in self.subviews) {
         if ([conView isKindOfClass:[UIImageView class]]) {
-            conView.frame = CGRectMake((item_space+item_width)*conView.tag, (self.frame.size.height-item_width)/2.f, item_width, item_width);
+            conView.frame = CGRectMake((item_space+item_width)*conView.tag+start_x, (self.frame.size.height-item_width)/2.f, item_width, item_width);
             if (conView.tag == _currentPage) {
                 conView.image = _selectImage;
             }else{
