@@ -43,7 +43,7 @@
     
     float item_space = 5.f;
     
-    float start_x = (kMainApplicationWidth-item_width*_pageNumber-item_space*(_pageNumber-1))/2.f;
+    float start_x = (self.frame.size.width-item_width*_pageNumber-item_space*(_pageNumber-1))/2.f;
     
     if (self.subviews.count<=0) {
         
