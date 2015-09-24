@@ -5,3 +5,5 @@ CYPageControl 继承UIPageControl实现自定义圆点
 CYSlider 继承父类UISlider修改显示区域
 
 CYCircleScrollView 循环滚动ScrollView视图
+
+CYSearchBar searchbar的自定义

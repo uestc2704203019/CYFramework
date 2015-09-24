@@ -19,4 +19,12 @@
  ****/
 - (UIImage *)resizeImageWithInsetEdge:(UIEdgeInsets)edgeInset;
 
+/***
+ *
+ *  !@brief 从某个点开始截取一定大小的图片
+ *
+ *
+ ***/
+- (UIImage *)captureImageWithPoint:(CGPoint)point size:(CGSize)size;
+
 @end

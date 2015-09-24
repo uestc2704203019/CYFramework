@@ -41,7 +41,7 @@
 {
     float item_width = 10;
     
-    float item_space = 5.f;
+    float item_space = 0.f;
     
     float start_x = (self.frame.size.width-item_width*_pageNumber-item_space*(_pageNumber-1))/2.f;
     

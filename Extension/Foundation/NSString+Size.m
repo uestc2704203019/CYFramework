@@ -10,6 +10,11 @@
 
 @implementation NSString (Size)
 
+/*****
+ *
+ *  !@brief 计算字符串需要的Size
+ *
+ ****/
 - (CGSize)sizeWithFont:(UIFont *)font maxWidth:(float)width maxHeight:(float)height breakMode:(NSLineBreakMode)breakMode
 {
     NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
