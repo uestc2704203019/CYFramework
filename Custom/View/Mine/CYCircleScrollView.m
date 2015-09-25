@@ -44,8 +44,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.pagingEnabled = YES;
-        self.contentSize = CGSizeMake(self.bounds.size.width*3*kScale, 0);
-        self.contentOffset = CGPointMake(self.bounds.size.width*kScale, 0);
+        self.contentSize = CGSizeMake(self.bounds.size.width*3, 0);
+        self.contentOffset = CGPointMake(self.bounds.size.width, 0);
         self.delegate = self;
         self.showsHorizontalScrollIndicator = NO;
         

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
+//!@brief 无限循环的scrollview
+
 @class CYCircleScrollView;
 
 @protocol CircleDataSource <NSObject>
