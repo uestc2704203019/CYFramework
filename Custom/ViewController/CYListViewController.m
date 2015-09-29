@@ -20,17 +20,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self loadSubViews];
-    [self loadNavigationBar];
 }
 
 #pragma mark - view opera
 
-- (void)loadSubViews
-{}
-
 - (void)loadNavigationBar
-{}
+{
+    [super loadNavigationBar];
+}
+
+
+- (void)setNavigationBar:(CYNavigationBar *)navigationBar
+{
+    [super setNavigationBar:navigationBar];
+}
+
+- (void)setNavigationBarHidden:(BOOL)navigationBarHidden
+{
+    [super setNavigationBarHidden:navigationBarHidden];
+}
+
+- (void)setTitle:(NSString *)title
+{
+    [super setTitle:title];
+}
+
 
 #pragma mark - data opera
 

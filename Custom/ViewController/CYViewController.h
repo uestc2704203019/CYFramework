@@ -7,13 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CYNavigationBar.h"
 
 @interface CYViewController : UIViewController
 
+@property (nonatomic, strong) CYNavigationBar *navigationBar;
+@property (nonatomic, assign) BOOL navigationBarHidden;
+
 @property (nonatomic, strong) UIView *contentView;
 
+#pragma mark - view manager
 - (void)loadSubViews;
 
 - (void)loadNavigationBar;
+
+#pragma mark - data get
+- (void)loadData;
 
 @end

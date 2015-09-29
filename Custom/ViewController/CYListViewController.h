@@ -7,23 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CYViewController.h"
+#import "CYNavigationBar.h"
 
-@interface CYListViewController : UIViewController
+@interface CYListViewController : CYViewController
 
 @property (nonatomic, strong) UITableView *contentTable;
-
-@property (nonatomic, strong) UIView *contentView;
 
 @property (nonatomic, assign) NSInteger totalCount;
 @property (nonatomic, assign) NSInteger pageLimitCount;
 
 @property (nonatomic, assign) BOOL hasNextPage;
-
-#pragma mark - view Load and refresh
-
-- (void)loadSubViews;
-
-- (void)loadNavigationBar;
 
 #pragma mark - data Load and reset
 

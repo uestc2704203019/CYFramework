@@ -11,6 +11,10 @@
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
+#define kNavigationBarHeight 64.f
+#define kStatusBarHeight 20.f
+#define kTabbarHeight 49.f
+
 //屏幕比例，用来分辨率计算
 #define kScreenScale [UIScreen mainScreen].scale
 

@@ -7,9 +7,22 @@
 //
 
 #import "CYNavigationController.h"
+#import <UIKit/UIKit.h>
+
+@interface CYNavigationController () <UIGestureRecognizerDelegate>
+
+@end
 
 @implementation CYNavigationController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    return YES;
+}
 
 @end
