@@ -28,6 +28,7 @@
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureAction:)];
         tapGesture.numberOfTapsRequired = 1;
         tapGesture.numberOfTouchesRequired = 1;
+        tapGesture.cancelsTouchesInView = NO;
         [self addGestureRecognizer:tapGesture];
     }
     return self;
@@ -94,16 +95,17 @@
     _contentView.layer.borderWidth = 1.0f;
     _contentView.center = self.center;
     _contentView.backgroundColor = [UIColor whiteColor];
-    if (![self.subviews containsObject:_contentView]) {
-        [self addSubview:contentView];
+    if ([self.subviews containsObject:_contentView]) {
+        [_contentView removeFromSuperview];
     }
-    [self addSubview:contentView];
+    [self addSubview:_contentView];
 }
 
 - (void)show
 {
+    [self resignNotificaiton];
     [self registerNotification];
-
+    
     [[UIApplication sharedApplication].keyWindow addSubview:self];
     
     if (_isHaveAnimation) {
